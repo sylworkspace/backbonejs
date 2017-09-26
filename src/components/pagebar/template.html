@@ -1,0 +1,25 @@
+<script type="text/template" id="am-template-component-page-bar">
+  <a class="am-btn am-icon-btn btn-home" href="#">
+    <span class="am-icon-home"></span>
+  </a>
+  <a class="am-btn am-icon-btn btn-prev" href="#">
+    <span class="am-icon-prev"></span>
+  </a>
+  <span class="am-label page-number">
+    <%= currentPage %> / <%= maxPage %>
+  </span>
+  <a class="am-btn am-icon-btn btn-next" href="#">
+    <span class="am-icon-next"></span>
+  </a>
+  <a class="am-btn am-icon-btn btn-end" href="#">
+    <span class="am-icon-end"></span>
+  </a>
+  <div class="am-control am-select select-page-size">
+  </div>
+  <div class="jump-to">
+    跳到
+    <input class="am-control am-input jump-page">
+    页
+  </div>
+  <a class="am-btn btn-jump">确定</a>
+</script>

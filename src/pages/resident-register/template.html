@@ -1,0 +1,104 @@
+<script type="text/template" id="am-template-page-resident-register">
+  <div class="am-panel panel-resident-register">
+    <div class="am-panel-title">
+      <div class="title-text">
+        住户信息
+      </div>
+      <div class="am-control-group auth-controls">
+        <span class="headright1"><span class="am-icon-light-warn"></span>该住户未进行身份验证</span>
+        <!--<span class="headright3"><span class="headright4"></span>前往核验</span>-->
+        <a class="am-btn am-btn-primary with-icon btn-go-auth"><span class="am-btn-inner"><span class="btn-icon am-icon-query"></span>前往核验</span></a>
+      </div>
+    </div>
+    <div class="am-panel-body">
+      <div class="panel-content">
+        <div class="panel-content-detail">
+          <div class="resident-register-detail">
+            <div>姓名</div><input class="am-input" type="text" name="name" value="张某某">
+          </div>
+          <div class="resident-register-detail">
+            <div>民族</div><input class="am-input" type="text" name="race" value="汉">
+          </div>
+          <div class="resident-register-detail">
+            <div>性别</div><!--
+            --><div class="am-control am-select select-sex">
+            </div>
+          </div>
+          <div class="resident-register-detail">
+            <div>出生日期</div><input class="am-input" type="text" name="birthday" value="1990.1.1">
+          </div>
+          <div class="resident-register-detail">
+            <div>身份证号</div><input class="am-input" type="text" name="ID" value="123648486515684156">
+          </div>
+          <div class="resident-register-detail">
+            <div>户籍地</div><input class="am-input" type="text" name="hometown" value="湖北武汉">
+          </div>
+        </div>
+        <div class="panel-content-pic">
+            <span class="panel-content-pic-detail" style="visibility:hidden">身份证照片</span>
+            <span class="panel-content-pic-detail" style="visibility:hidden">现场照</span>
+            <span class="panel-content-pic-detail">证件照</span>
+          <div class="downloadicon"></div><!--此处需要连接后端-->
+          <div class="downloadfont">(一寸照规格)</div>
+        </div>
+      </div>
+        <div class="panel-content">
+        <div class="panel-content-detail2">
+          <div class="resident-register-detail">
+            <div>身份属性</div><!--
+            --><div class="am-control am-select select-property">
+            </div>
+          </div>
+          <div class="resident-register-detail">
+            <div>手机号</div><input class="am-input" type="text" name="phonenumber" value="13800000000">
+          </div>
+          <div class="resident-register-detail">
+            <div>录入时间</div><input class="am-input" type="text" name="time" value="2017-07-17">
+          </div>
+          <div class="resident-register-detail">
+            <div>备注</div><input class="am-input" type="text" name="remark">
+          </div>
+          </div>
+        <div class="panel-content-detail3">
+          <div class="resident-register-detail1">
+            <div>上次更新</div><input class="am-input" type="text" name="update" value="王某某" readonly="readonly">
+          </div>
+          <div class="resident-register-detail1">
+            <div>通行地址</div><!--
+            --><div class="am-control am-select select-address">
+            </div>
+          </div>
+          <div class="add-address">
+            <div>
+              <span class="add-address-id">1</span>
+              <input type="text" name="building1">栋<!--此处需要连接后端-->
+              <select name="unit1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>单元
+              <input type="text" name="door1">室
+              <span class="am-switch on switch1"></span>
+              <span class="add-address-icon"></span>     <!--此处需要连接后端-->
+              <img src="../img/resident-register/删除（列表操作）.png" align="middle">
+            </div>
+            <div>
+              <span class="add-address-id">2</span>
+              <input type="text" name="building2">栋<!--此处需要连接后端-->
+              <select name="unit2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>单元
+              <input type="text" name="door2">室
+              <span class="am-switch off switch2"></span>
+              <span class="add-address-icon"></span>              <!--此处需要连接后端-->
+              <img src="../img/resident-register/删除（列表操作）.png" align="middle">
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</script>

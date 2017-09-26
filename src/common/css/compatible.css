@@ -1,0 +1,14 @@
+input, textarea {
+ color: #000;
+}
+
+.placeholder {
+  color: #aaa;
+}
+
+/*
+input[type="text"] {
+  border: 1px solid red;
+  border-radius: 5px;
+}
+*/

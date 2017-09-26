@@ -1,0 +1,211 @@
+.am-page-resident-register .am-select {
+  text-align: left;
+  width: 162px;
+  margin-right: 0;
+}
+
+.auth-controls {
+  margin-right: 24px;
+  float: right;
+}
+
+.auth-controls .am-icon-light-warn {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+.headright1{
+  display: inline-block;
+  width: 215px;
+  height: 33px;
+  background-color: #FFF7D0;
+  font-size: 16px;
+  color: #333333;
+  border-radius: 16px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.headright2{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #FFAE00;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.headright3{
+  display: inline-block;
+  width: 115px;
+  height: 33px;
+  background-color: #00CC66;
+  border-radius: 16px;
+  font-size: 14px ;
+  color: #ffffff;
+  text-align: center;
+  line-height: 30px
+}
+
+.headright4{
+  display: inline-block;
+  background-image: url('../img/icons3.png');
+  width: 14px;
+  height: 15px;
+  line-height: 15px;
+  background-position: -100px -50px;
+  text-align: center;
+}
+
+.am-btn.btn-go-auth.with-icon {
+  min-width: 113px;
+  border-radius: 16px;
+  border: 1px solid #00cc66;
+  background-color: #00cc66;
+}
+
+.am-btn.btn-go-auth:hover {
+  border: 1px solid #00cc66;
+  background-color: #00cc66;
+}
+
+.am-btn.btn-go-auth:active {
+  border: 1px solid #00cc66;
+  background-color: #00cc66;
+}
+
+.panel-content{
+  margin: 28px auto;
+  border-bottom-color: #D9D9D9;
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+}
+
+.resident-register-detail{
+  margin: 10px 40px;
+}
+
+.resident-register-detail div{
+  display: inline-block;
+  font-size: 14px;
+  color: #666666;
+  width: 100px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.resident-register-detail input{
+  border: solid 1px #D9D9D9;
+}
+
+.resident-register-detail1{
+  margin: 10px 0px;
+  text-align: left;
+}
+
+.resident-register-detail1 div{
+  display: inline-block;
+  font-size: 14px;
+  color: #666666;
+  width: 100px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.resident-register-detail1 input{
+  border: solid 1px #D9D9D9;
+}
+
+.panel-content-detail{
+  display: inline-table;
+  margin-right: 100px;
+}
+
+.panel-content-detail2{
+  display: inline-table;
+  margin-right: 100px;
+}
+
+.panel-content-detail3{
+  display: inline-table;
+}
+
+.panel-content-pic{
+  display: inline-table;
+  width: 560px;
+}
+
+.panel-content-pic-detail{
+  display: inline-block;
+  width: 101px;
+  height: 125px;
+  background-image: url('../img/resident-register/默认照片.png');
+  background-position: 15px 5px ;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  border: 2px dotted #888888;
+  border-radius: 4px;
+  margin: 10px 15px;
+  vertical-align: top;
+  line-height: 217px;
+}
+
+.downloadicon{
+  background-image: url('../img/icons1.png');
+  background-position: 34px -10px;
+  width: 0px;
+  height: 5px;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-left: 405px;
+  margin-bottom: 10px;
+}
+
+.downloadfont{
+  padding-left: 280px;
+  font-size: 12px;
+  color: #888888;
+  text-decoration: underline;
+}
+
+.add-address{
+   overflow: auto;
+   width: 560px;
+   height: 110px;
+   text-align: left;
+}
+
+.add-address-id{
+  display: inline-block;
+  border: 1px #D9D9D9 solid;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.add-address input{
+  width: 65px;
+  margin: 5px 10px;
+}
+
+.add-address select{
+  width: 65px;
+  margin: 5px 10px;
+}
+
+.add-address-icon{
+  border-style: none;
+  border-radius: 0px;
+  margin: 0px 10px;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 13px;
+  width: 13px;
+  height: 13px;
+  background-position: -91px -19px;
+  background-image: url('../img/icons1.png');
+}

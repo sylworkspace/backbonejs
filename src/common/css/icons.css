@@ -1,0 +1,162 @@
+.am-icon-plus {
+  background-image: url('../img/icons1.png');
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-icon-query {
+  background-image: url('../img/icons1.png');
+  background-position: -18px 0;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-icon-refresh {
+  background-image: url('../img/icons1.png');
+  background-position: -54px -18px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-icon-remove-primary {
+  background-image: url('../img/icons1.png');
+  background-position: -18px -18px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-icon-remove {
+  background-image: url('../img/icons1.png');
+  background-position: -162px -18px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-icon-download {
+  background-image: url('../img/icons1.png');
+  background-position: -180px -18px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-icon-home {
+  background-image: url('../img/icons1.png');
+  background-position: 0 -54px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-btn:hover .am-icon-home {
+  background-image: url('../img/icons1.png');
+  background-position: 0 -36px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-icon-prev {
+  background-image: url('../img/icons1.png');
+  background-position: -18px -54px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-btn:hover .am-icon-prev {
+  background-image: url('../img/icons1.png');
+  background-position: -18px -36px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-icon-next {
+  background-image: url('../img/icons1.png');
+  background-position: -36px -54px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-btn:hover .am-icon-next {
+  background-image: url('../img/icons1.png');
+  background-position: -36px -36px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-icon-end {
+  background-image: url('../img/icons1.png');
+  background-position: -54px -54px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-btn:hover .am-icon-end {
+  background-image: url('../img/icons1.png');
+  background-position: -54px -36px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+}
+
+.am-icon-select-down {
+  height: 14px;
+  width: 14px;
+  line-height: 14px;
+  background-image: url('../img/icons2.png');
+  background-position: -18px 0;
+}
+
+.am-icon-calendar {
+  height: 18px;
+  width: 18px;
+  line-height: 18px;
+  background-image: url('../img/icons2.png');
+  background-position: -58px 0;
+}
+
+.am-icon-resident-checked {
+  height: 10px;
+  width: 10px;
+  line-height: 10px;
+  background-image: url('../img/resident-checked.png');
+}
+
+.am-icon-resident-unchecked {
+  height: 10px;
+  width: 10px;
+  line-height: 10px;
+  background-image: url('../img/resident-unchecked.png');
+}
+
+.am-icon-list-edit {
+  height: 14px;
+  width: 14px;
+  line-height: 14px;
+  background-image: url('../img/icon-list-edit.png');
+}
+
+.am-icon-auth {
+  height: 14px;
+  width: 14px;
+  line-height: 14px;
+  background-image: url('../img/icon-auth.png');
+}
+
+.am-icon-light-warn {
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+  background-image: url('../img/icons3.png');
+  background-position: -120px -215px;
+}

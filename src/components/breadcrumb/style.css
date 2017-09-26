@@ -1,0 +1,22 @@
+.am-breadcrumb {
+  padding: 60px 0 0 0;
+  height: 48px;
+  background-color:#fff;
+  margin-bottom: 8px;
+}
+
+.am-breadcrumb .location-box {
+  padding:15px 230px ;
+  font-size:14px;
+  color:#666;
+}
+
+.am-breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.am-breadcrumb a:hover {
+  color: #666;
+  text-decoration: none;
+}

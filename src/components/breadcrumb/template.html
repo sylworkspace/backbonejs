@@ -1,0 +1,12 @@
+<script type="text/template" id="am-template-component-breadcrumb">
+  <div class="container-fluid am-breadcrumb">
+    <div class="location-box">
+      <%locations.forEach(function(location, locationIndex) { %>
+        <a href="<%=location.href%>"><%= location.text %></a>
+        <%if ( locationIndex !== locations.length - 1 ) { %>
+          >
+        <%}
+      }); %>
+    </div>
+  </div>
+</script>

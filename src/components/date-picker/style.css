@@ -1,0 +1,16 @@
+.am-date-picker {
+  position: relative;
+  display: inline-block;
+}
+
+.am-date-picker input.am-input {
+  width: 104px;
+  padding-right: 30px;
+}
+
+.am-date-picker .am-icon-calendar {
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 7px;
+}

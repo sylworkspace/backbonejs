@@ -1,0 +1,9 @@
+td.am-string-list-cell {
+  overflow: initial;
+  width: 150px;
+}
+
+.am-string-list-cell .am-select {
+  display: block;
+  width: 100px;
+}

@@ -1,0 +1,33 @@
+.am-switch {
+  position: relative;
+  display: inline-block;
+  width: 41px;
+  height: 19px;
+  border-radius: 9px;
+  background-color: #00CC66;
+  margin: 0px 5px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.am-switch .inner-block {
+  position: absolute;
+  top: 1px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  border-radius: 8px;
+  background-color: #F9FFFC;
+}
+
+.am-switch.on .inner-block {
+  right: 0;
+}
+
+.am-switch.off {
+  background-color: #cacaca;
+}
+
+.am-switch.off .inner-block {
+  left: 0;
+}

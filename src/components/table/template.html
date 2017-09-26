@@ -1,0 +1,18 @@
+<script type="text/template" id="am-template-component-table">
+  <tr class="table-header">
+    <%columns.forEach(function(column) { %>
+      <th data-property="<%= column.property %>">
+        <%if ( column.type === 'checkbox' ) { %>
+          <span class="am-checkbox"></span>
+        <%}
+        else { %>
+          <%= column.header %>
+        <%} %>
+      </th>
+    <%}); %>
+  </tr>
+  <%collection.forEach(function(model, modelIndex) { %>
+  <tr data-index="<%= modelIndex%>">
+  </tr>
+  <%}); %>
+</script>

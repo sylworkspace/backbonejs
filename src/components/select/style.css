@@ -1,0 +1,78 @@
+.am-select {
+  display: inline-block;
+  position: relative;
+  vertical-align: bottom;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 0 26px 0 12px;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+  not supported by any browser */
+}
+
+.am-select .am-option-value {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #333;
+}
+
+.am-select .am-option-value:active {
+  text-decoration: none;
+}
+
+.am-select .am-options {
+  position: absolute;
+  display: none;
+  border: 1px solid #0087ff;
+  border-radius: 4px;
+  margin: 0;
+  z-index: 10;
+}
+
+.am-select .am-options.down {
+  left: 0;
+  top: 40px;
+}
+
+.am-select .am-options.up {
+  left: 0;
+  bottom: 40px;
+}
+
+.am-select .am-option {
+  display: block;
+  list-style: none;
+  height: 30px;
+  line-height: 30px;
+  min-width: 100px;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.am-select .am-option:hover {
+  background-color: #ddefff;
+}
+
+.am-select:hover {
+  border: 1px solid #0087ff;
+  box-shadow: 0px 0px 4px #0087ff;
+}
+
+.am-select .am-icon-select-down {
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 9px;
+}

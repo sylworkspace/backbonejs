@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试页面</title>
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/bundle-9ff1c71c19.min.css">
+  </head>
+  <body>
+
+    <script type="text/template" id="am-template-component-breadcrumb">
+  <div class="container-fluid am-breadcrumb">
+    <div class="location-box">
+      <%locations.forEach(function(location, locationIndex) { %>
+        <a href="<%=location.href%>"><%= location.text %></a>
+        <%if ( locationIndex !== locations.length - 1 ) { %>
+          >
+        <%}
+      }); %>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="am-template-component-button">
+  <button><%= text %></button>
+</script>
+
+<script type="text/template" id="am-template-component-datepicker">
+  <input type="text" class="form-control am-input">
+  <span class="am-icon-calendar"></span>
+</script>
+
+<script type="text/template" id="am-template-component-nav-bar">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="#">
+        <img class="brand-logo" src="img/header/logo.png">
+      </a>
+      <div class="platform-info">
+        <img class="platform-logo" src="img/header/platform-logo.png">
+        人员管理平台
+      </div>
+      <div class="op-panel pull-right">
+        <a class="icon-user" href="#">
+          <img src="img/header/user.png"></img>
+        </a>
+        <a class="btn-username" href="#">
+          admin
+        </a>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="am-template-component-page-bar">
+  <a class="am-btn am-icon-btn btn-home" href="#">
+    <span class="am-icon-home"></span>
+  </a>
+  <a class="am-btn am-icon-btn btn-prev" href="#">
+    <span class="am-icon-prev"></span>
+  </a>
+  <span class="am-label page-number">
+    <%= currentPage %> / <%= maxPage %>
+  </span>
+  <a class="am-btn am-icon-btn btn-next" href="#">
+    <span class="am-icon-next"></span>
+  </a>
+  <a class="am-btn am-icon-btn btn-end" href="#">
+    <span class="am-icon-end"></span>
+  </a>
+  <div class="am-control am-select select-page-size">
+  </div>
+  <div class="jump-to">
+    跳到
+    <input class="am-control am-input jump-page">
+    页
+  </div>
+  <a class="am-btn btn-jump">确定</a>
+</script>
+
+<script type="text/template" id="am-template-component-select">
+  <a class="am-option-value" value="<%= value %>" href="#"><%= mapper[value] %></a>
+  <ul class="am-options <%= direction %>">
+    <% items.forEach(function(item) { %>
+      <li class="am-option" value="<%= item.value %>"><%= item.text %></li>
+    <%}) %>
+  </ul>
+  <span class="am-icon-select-down"></span>
+</script>
+
+<script type="text/template" id="am-template-component-side-bar">
+  <div class="sidebar-toggle">
+    <img class="btn-toggle btn-expand" src="img/sidebar/panel-expand.png">
+    <img class="btn-toggle btn-shrink" src="img/sidebar/panel-shrink.png">
+  </div>
+  <a class="nav-item nav-item-user" href="#">
+    <div class="nav-item-icon"></div>
+    <span>住户管理</span>
+  </a>
+  <a class="nav-item nav-item-statistics" href="#">
+    <div class="nav-item-icon"></div>
+    <span>统计分析</span>
+  </a>
+  <a class="nav-item nav-item-setting" href="#">
+    <div class="nav-item-icon"></div>
+    <span>配置中心</span>
+  </a>
+</script>
+
+<script type="text/template" id="am-template-component-switch">
+  <span class="inner-block"></span>
+</script>
+
+<script type="text/template" id="am-template-component-table">
+  <tr class="table-header">
+    <%columns.forEach(function(column) { %>
+      <th data-property="<%= column.property %>">
+        <%if ( column.type === 'checkbox' ) { %>
+          <span class="am-checkbox"></span>
+        <%}
+        else { %>
+          <%= column.header %>
+        <%} %>
+      </th>
+    <%}); %>
+  </tr>
+  <%collection.forEach(function(model, modelIndex) { %>
+  <tr data-index="<%= modelIndex%>">
+  </tr>
+  <%}); %>
+</script>
+
+<script type="text/template" id="am-template-component-auth-cell">
+  <% if ( hasAuth === '0' ) { %>
+    <span class="am-icon-resident-checked"></span>已验证
+  <%}
+  else { %>
+  <span class="am-icon-resident-unchecked"></span>未验证
+  <%} %>
+</script>
+
+<script type="text/template" id="am-template-component-checkbox-cell">
+  <span class="am-checkbox"></span>
+</script>
+
+<script type="text/template" id="am-template-component-op-cell">
+  <a class="am-icon-list-edit"></a>
+  <a class="am-icon-remove-primary"></a>
+  <% if ( hasAuth === '0' ) { %>
+  <a class="am-icon-auth"></a>
+  <%} %>
+</script>
+
+<script type="text/template" id="am-template-component-string-list-cell">
+  <div class="am-control am-select">
+  </div>
+</script>
+
+<script type="text/template" id="am-template-component-text-cell">
+  <%if ( formatter) { %>
+    <%= formatter(text) %>
+  <%}
+  else { %>
+  <%= text %>
+  <%} %>
+</script>
+
+    <script type="text/template" id="am-template-page-login">
+  Hello <%= name %>
+</script>
+
+<script type="text/template" id="am-template-page-resident-list">
+  <div class="am-panel panel-resident-search">
+    <div class="am-control-group">
+      <div class="am-control am-select select-search-type">
+      </div>
+      <input class="am-control am-input input-address" type="text">
+    </div>
+    <div class="am-control-group">
+      <span class="am-control am-label">录入时间</span>
+      <div class="am-control am-date-picker date-picker-start">
+      </div>
+      <div class="am-control am-date-picker date-picker-end">
+      </div>
+      <div class="am-control am-btn-group">
+        <a class="btn-date-select btn-select-today" href="#">当日</a>
+        <a class="btn-date-select btn-select-yesterday" href="#">昨日</a>
+        <a class="btn-date-select btn-select-week" href="#">一周</a>
+        <a class="btn-date-select btn-select-month" href="#">一月</a>
+      </div>
+    </div>
+    <a class="am-btn am-btn-primary with-icon btn-search"><span class="am-btn-inner"><span class="btn-icon am-icon-query"></span>搜索</span></a>
+  </div>
+  <div class="am-panel panel-resident-list">
+    <div class="am-panel-title">
+      <div class="title-text">
+        住户列表
+      </div>
+      <div class="am-control-group">
+        <a class="am-btn am-btn-primary with-icon"><span class="am-btn-inner"><span class="btn-icon am-icon-plus"></span>添加住户</span></a>
+        <a class="am-btn with-icon"><span class="am-btn-inner"><span class="btn-icon am-icon-remove"></span>删除</span></a>
+      </div>
+      <div class="am-control-group search-status">
+        <span class="label-total-count">共有：<span class="am-label number">100</span>条</span>
+        <span class="label-search-count">，根据条件搜索到<span class="am-label number">20</span>条</span>
+        <span class="btn-icon am-icon-refresh"></span>
+      </div>
+    </div>
+    <div class="am-panel-body">
+      <div class="panel-row">
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="am-template-page-resident-register">
+  <div class="am-panel panel-resident-register">
+    <div class="am-panel-title">
+      <div class="title-text">
+        住户信息
+      </div>
+      <div class="am-control-group auth-controls">
+        <span class="headright1"><span class="am-icon-light-warn"></span>该住户未进行身份验证</span>
+        <!--<span class="headright3"><span class="headright4"></span>前往核验</span>-->
+        <a class="am-btn am-btn-primary with-icon btn-go-auth"><span class="am-btn-inner"><span class="btn-icon am-icon-query"></span>前往核验</span></a>
+      </div>
+    </div>
+    <div class="am-panel-body">
+      <div class="panel-content">
+        <div class="panel-content-detail">
+          <div class="resident-register-detail">
+            <div>姓名</div><input class="am-input" type="text" name="name" value="张某某">
+          </div>
+          <div class="resident-register-detail">
+            <div>民族</div><input class="am-input" type="text" name="race" value="汉">
+          </div>
+          <div class="resident-register-detail">
+            <div>性别</div><!--
+            --><div class="am-control am-select select-sex">
+            </div>
+          </div>
+          <div class="resident-register-detail">
+            <div>出生日期</div><input class="am-input" type="text" name="birthday" value="1990.1.1">
+          </div>
+          <div class="resident-register-detail">
+            <div>身份证号</div><input class="am-input" type="text" name="ID" value="123648486515684156">
+          </div>
+          <div class="resident-register-detail">
+            <div>户籍地</div><input class="am-input" type="text" name="hometown" value="湖北武汉">
+          </div>
+        </div>
+        <div class="panel-content-pic">
+            <span class="panel-content-pic-detail" style="visibility:hidden">身份证照片</span>
+            <span class="panel-content-pic-detail" style="visibility:hidden">现场照</span>
+            <span class="panel-content-pic-detail">证件照</span>
+          <div class="downloadicon"></div><!--此处需要连接后端-->
+          <div class="downloadfont">(一寸照规格)</div>
+        </div>
+      </div>
+        <div class="panel-content">
+        <div class="panel-content-detail2">
+          <div class="resident-register-detail">
+            <div>身份属性</div><!--
+            --><div class="am-control am-select select-property">
+            </div>
+          </div>
+          <div class="resident-register-detail">
+            <div>手机号</div><input class="am-input" type="text" name="phonenumber" value="13800000000">
+          </div>
+          <div class="resident-register-detail">
+            <div>录入时间</div><input class="am-input" type="text" name="time" value="2017-07-17">
+          </div>
+          <div class="resident-register-detail">
+            <div>备注</div><input class="am-input" type="text" name="remark">
+          </div>
+          </div>
+        <div class="panel-content-detail3">
+          <div class="resident-register-detail1">
+            <div>上次更新</div><input class="am-input" type="text" name="update" value="王某某" readonly="readonly">
+          </div>
+          <div class="resident-register-detail1">
+            <div>通行地址</div><!--
+            --><div class="am-control am-select select-address">
+            </div>
+          </div>
+          <div class="add-address">
+            <div>
+              <span class="add-address-id">1</span>
+              <input type="text" name="building1">栋<!--此处需要连接后端-->
+              <select name="unit1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>单元
+              <input type="text" name="door1">室
+              <span class="am-switch on switch1"></span>
+              <span class="add-address-icon"></span>     <!--此处需要连接后端-->
+              <img src="../img/resident-register/删除（列表操作）.png" align="middle">
+            </div>
+            <div>
+              <span class="add-address-id">2</span>
+              <input type="text" name="building2">栋<!--此处需要连接后端-->
+              <select name="unit2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>单元
+              <input type="text" name="door2">室
+              <span class="am-switch off switch2"></span>
+              <span class="add-address-icon"></span>              <!--此处需要连接后端-->
+              <img src="../img/resident-register/删除（列表操作）.png" align="middle">
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+
+    <div class="am-navbar navbar navbar-inverse navbar-fixed-top">
+      <!-- Insert NavBar here -->
+    </div>
+
+    <div class="am-container">
+      <div class="am-sidebar">
+        <!-- Insert SideBar here -->
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/polyfill.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="js/bundle-44cd375dbe.js"></script>
+  </body>
+</html>

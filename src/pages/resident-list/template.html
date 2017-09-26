@@ -1,0 +1,43 @@
+<script type="text/template" id="am-template-page-resident-list">
+  <div class="am-panel panel-resident-search">
+    <div class="am-control-group">
+      <div class="am-control am-select select-search-type">
+      </div>
+      <input class="am-control am-input input-address" type="text">
+    </div>
+    <div class="am-control-group">
+      <span class="am-control am-label">录入时间</span>
+      <div class="am-control am-date-picker date-picker-start">
+      </div>
+      <div class="am-control am-date-picker date-picker-end">
+      </div>
+      <div class="am-control am-btn-group">
+        <a class="btn-date-select btn-select-today" href="#">当日</a>
+        <a class="btn-date-select btn-select-yesterday" href="#">昨日</a>
+        <a class="btn-date-select btn-select-week" href="#">一周</a>
+        <a class="btn-date-select btn-select-month" href="#">一月</a>
+      </div>
+    </div>
+    <a class="am-btn am-btn-primary with-icon btn-search"><span class="am-btn-inner"><span class="btn-icon am-icon-query"></span>搜索</span></a>
+  </div>
+  <div class="am-panel panel-resident-list">
+    <div class="am-panel-title">
+      <div class="title-text">
+        住户列表
+      </div>
+      <div class="am-control-group">
+        <a class="am-btn am-btn-primary with-icon"><span class="am-btn-inner"><span class="btn-icon am-icon-plus"></span>添加住户</span></a>
+        <a class="am-btn with-icon"><span class="am-btn-inner"><span class="btn-icon am-icon-remove"></span>删除</span></a>
+      </div>
+      <div class="am-control-group search-status">
+        <span class="label-total-count">共有：<span class="am-label number">100</span>条</span>
+        <span class="label-search-count">，根据条件搜索到<span class="am-label number">20</span>条</span>
+        <span class="btn-icon am-icon-refresh"></span>
+      </div>
+    </div>
+    <div class="am-panel-body">
+      <div class="panel-row">
+      </div>
+    </div>
+  </div>
+</script>

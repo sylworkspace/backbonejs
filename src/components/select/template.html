@@ -1,0 +1,9 @@
+<script type="text/template" id="am-template-component-select">
+  <a class="am-option-value" value="<%= value %>" href="#"><%= mapper[value] %></a>
+  <ul class="am-options <%= direction %>">
+    <% items.forEach(function(item) { %>
+      <li class="am-option" value="<%= item.value %>"><%= item.text %></li>
+    <%}) %>
+  </ul>
+  <span class="am-icon-select-down"></span>
+</script>
