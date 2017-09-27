@@ -8,11 +8,15 @@
     <!--[if lt IE 9]>
       <script type="text/javascript" src="js/html5shiv.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="css/bundle-676960e008.min.css">
+    <link rel="stylesheet" href="css/bundle-f658ee902d.min.css">
   </head>
   <body>
 
-    <script type="text/template" id="am-template-component-breadcrumb">
+    <script type="text/template" id="am-template-component-button">
+  <button><%= text %></button>
+</script>
+
+<script type="text/template" id="am-template-component-breadcrumb">
   <div class="container-fluid am-breadcrumb">
     <div class="location-box">
       <%locations.forEach(function(location, locationIndex) { %>
@@ -23,10 +27,6 @@
       }); %>
     </div>
   </div>
-</script>
-
-<script type="text/template" id="am-template-component-button">
-  <button><%= text %></button>
 </script>
 
 <script type="text/template" id="am-template-component-datepicker">
@@ -116,10 +116,6 @@
   </a>
 </script>
 
-<script type="text/template" id="am-template-component-switch">
-  <span class="inner-block"></span>
-</script>
-
 <script type="text/template" id="am-template-component-tab-bar">
   <div class="container-fluid am-tabs">
     <% items.forEach(function(item) { %>
@@ -132,6 +128,10 @@
         href="<%= item.href %>"><%= item.text %></a>
     <% }); %>
   </div>
+</script>
+
+<script type="text/template" id="am-template-component-switch">
+  <span class="inner-block"></span>
 </script>
 
 <script type="text/template" id="am-template-component-table">
@@ -201,6 +201,10 @@
       <div class="control-chart"><div class="content-chart analysis-pass-time-chart"></div></div>
     </div>
   </div>
+</script>
+
+<script type="text/template" id="am-template-page-configuration">
+  
 </script>
 
 <script type="text/template" id="am-template-page-login">
@@ -457,6 +461,6 @@
     <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript" src="js/locales/bootstrap-datepicker.zh-CN.min.js"></script>
     <script type="text/javascript" src="js/echarts-all.js"></script>
-    <script type="text/javascript" src="js/bundle-b95279c86b.js"></script>
+    <script type="text/javascript" src="js/bundle-fc99f8dad9.js"></script>
   </body>
 </html>

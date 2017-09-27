@@ -16300,7 +16300,7 @@ $(function () {
   });
 });
 
-},{"./components/nav-bar":52,"./components/side-bar":55,"./routers":66,"backbone":3}],60:[function(require,module,exports){
+},{"./components/nav-bar":52,"./components/side-bar":55,"./routers":68,"backbone":3}],60:[function(require,module,exports){
 'use strict';
 
 var Backbone = require('backbone');
@@ -16918,7 +16918,34 @@ module.exports = {
   AnalysisPage: AnalysisPage
 };
 
-},{"../../components/tab-bar":57,"../../store":70,"backbone":3,"underscore":40}],63:[function(require,module,exports){
+},{"../../components/tab-bar":57,"../../store":72,"backbone":3,"underscore":40}],63:[function(require,module,exports){
+'use strict';
+
+var Backbone = require('backbone');
+var _ = require('underscore');
+
+var $configurationPageTemplate = $('#am-template-page-configuration');
+
+var ConfigurationPage = Backbone.View.extend({
+  tagName: 'div',
+  className: 'container-fluid am-page am-config-page am-page-configuration-resource-chart',
+  events: {},
+  template: _.template($configurationPageTemplate.html()),
+  initialize: function initialize() {
+    this.render();
+  },
+  render: function render() {
+    this.$el.html(this.template({}));
+
+    return this;
+  }
+});
+
+module.exports = {
+  ConfigurationPage: ConfigurationPage
+};
+
+},{"backbone":3,"underscore":40}],64:[function(require,module,exports){
 'use strict';
 
 var _require = require('../../models/resident'),
@@ -17267,7 +17294,7 @@ module.exports = {
   ResidentListPage: ResidentListPage
 };
 
-},{"../../api/resident":41,"../../common/util":43,"../../components/date-picker":51,"../../components/pagebar":53,"../../components/select":54,"../../components/table":58,"../../models/resident":60,"backbone":3,"underscore":40}],64:[function(require,module,exports){
+},{"../../api/resident":41,"../../common/util":43,"../../components/date-picker":51,"../../components/pagebar":53,"../../components/select":54,"../../components/table":58,"../../models/resident":60,"backbone":3,"underscore":40}],65:[function(require,module,exports){
 'use strict';
 
 var _require = require('../../components/select'),
@@ -17349,7 +17376,7 @@ module.exports = {
   ResidentRegisterPage: ResidentRegisterPage
 };
 
-},{"../../components/select":54,"../../components/switch":56,"backbone":3,"underscore":40}],65:[function(require,module,exports){
+},{"../../components/select":54,"../../components/switch":56,"backbone":3,"underscore":40}],66:[function(require,module,exports){
 'use strict';
 
 var _require = require('../../components/tab-bar'),
@@ -18191,7 +18218,29 @@ module.exports = {
   StatisticPage: StatisticPage
 };
 
-},{"../../components/tab-bar":57,"backbone":3,"underscore":40}],66:[function(require,module,exports){
+},{"../../components/tab-bar":57,"backbone":3,"underscore":40}],67:[function(require,module,exports){
+'use strict';
+
+var _require = require('../pages/configuration'),
+    ConfigurationPage = _require.ConfigurationPage;
+
+module.exports = {
+  routes: [{
+    path: 'configuration/',
+
+    name: 'ConfigurationPage',
+
+    page: ConfigurationPage,
+
+    meta: {
+      title: '配置中心',
+      module: 'configuration',
+      locations: null
+    }
+  }]
+};
+
+},{"../pages/configuration":63}],68:[function(require,module,exports){
 'use strict';
 
 var _require = require('../common/router'),
@@ -18199,14 +18248,15 @@ var _require = require('../common/router'),
 
 var residentRouter = require('./resident');
 var statisticRouter = require('./statistic');
+var configurationRouter = require('./configuration');
 
-var Router = createRouterClass([residentRouter, statisticRouter]);
+var Router = createRouterClass([residentRouter, statisticRouter, configurationRouter]);
 
 module.exports = {
   Router: Router
 };
 
-},{"../common/router":42,"./resident":67,"./statistic":68}],67:[function(require,module,exports){
+},{"../common/router":42,"./configuration":67,"./resident":69,"./statistic":70}],69:[function(require,module,exports){
 'use strict';
 
 var _require = require('../pages/resident-list'),
@@ -18247,7 +18297,7 @@ module.exports = {
   }]
 };
 
-},{"../pages/resident-list":63,"../pages/resident-register":64}],68:[function(require,module,exports){
+},{"../pages/resident-list":64,"../pages/resident-register":65}],70:[function(require,module,exports){
 'use strict';
 
 var _require = require('../pages/statistic'),
@@ -18284,7 +18334,7 @@ module.exports = {
   }]
 };
 
-},{"../pages/analysis":62,"../pages/statistic":65}],69:[function(require,module,exports){
+},{"../pages/analysis":62,"../pages/statistic":66}],71:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -18306,7 +18356,7 @@ module.exports = {
   }
 };
 
-},{}],70:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 'use strict';
 
 var identify = require('./identify');
@@ -18321,7 +18371,7 @@ module.exports = {
   map: map
 };
 
-},{"./identify":69,"./libs":71,"./map":72,"./user":73}],71:[function(require,module,exports){
+},{"./identify":71,"./libs":73,"./map":74,"./user":75}],73:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -18331,7 +18381,7 @@ module.exports = {
   createTime: ''
 };
 
-},{}],72:[function(require,module,exports){
+},{}],74:[function(require,module,exports){
 'use strict';
 
 var _keys = require('babel-runtime/core-js/object/keys');
@@ -18682,7 +18732,7 @@ module.exports = {
   StandardRatio: StandardRatio
 };
 
-},{"babel-runtime/core-js/object/keys":2}],73:[function(require,module,exports){
+},{"babel-runtime/core-js/object/keys":2}],75:[function(require,module,exports){
 'use strict';
 
 var _require = require('../models/user'),
