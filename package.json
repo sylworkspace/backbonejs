@@ -2,7 +2,7 @@
   "name": "authen-web",
   "version": "1.0.0",
   "description": "A project support IE8",
-  "author": "kinuxroot <kinuxroot@163.com>",
+  "author": "syl <sylworkspace@163.com>",
   "private": true,
   "scripts": {
     "start": "node ./tools/dev-server",

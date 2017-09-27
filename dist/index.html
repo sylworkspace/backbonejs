@@ -8,7 +8,7 @@
     <!--[if lt IE 9]>
       <script type="text/javascript" src="js/html5shiv.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="css/bundle-9ff1c71c19.min.css">
+    <link rel="stylesheet" href="css/bundle-eb42675d5f.min.css">
   </head>
   <body>
 
@@ -32,33 +32,6 @@
 <script type="text/template" id="am-template-component-datepicker">
   <input type="text" class="form-control am-input">
   <span class="am-icon-calendar"></span>
-</script>
-
-<script type="text/template" id="am-template-component-nav-bar">
-  <div class="navbar-inner">
-    <div class="container-fluid">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="brand" href="#">
-        <img class="brand-logo" src="img/header/logo.png">
-      </a>
-      <div class="platform-info">
-        <img class="platform-logo" src="img/header/platform-logo.png">
-        人员管理平台
-      </div>
-      <div class="op-panel pull-right">
-        <a class="icon-user" href="#">
-          <img src="img/header/user.png"></img>
-        </a>
-        <a class="btn-username" href="#">
-          admin
-        </a>
-      </div>
-    </div>
-  </div>
 </script>
 
 <script type="text/template" id="am-template-component-page-bar">
@@ -97,6 +70,51 @@
   <span class="am-icon-select-down"></span>
 </script>
 
+<script type="text/template" id="am-template-component-nav-bar">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="#">
+        <img class="brand-logo" src="img/header/logo.png">
+      </a>
+      <div class="platform-info">
+        <img class="platform-logo" src="img/header/platform-logo.png">
+        人员管理平台
+      </div>
+      <div class="op-panel pull-right">
+        <a class="icon-user" href="#">
+          <img src="img/header/user.png"></img>
+        </a>
+        <a class="btn-username" href="#">
+          admin
+        </a>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="am-template-component-switch">
+  <span class="inner-block"></span>
+</script>
+
+<script type="text/template" id="am-template-component-tab-bar">
+  <div class="container-fluid am-tabs">
+    <% items.forEach(function(item) { %>
+      <a
+        class="am-tabs-box
+        <% if ( item.active ) { %>
+          active
+        <% } %>
+        "
+        href="<%= item.href %>"><%= item.text %></a>
+    <% }); %>
+  </div>
+</script>
+
 <script type="text/template" id="am-template-component-side-bar">
   <div class="sidebar-toggle">
     <img class="btn-toggle btn-expand" src="img/sidebar/panel-expand.png">
@@ -114,10 +132,6 @@
     <div class="nav-item-icon"></div>
     <span>配置中心</span>
   </a>
-</script>
-
-<script type="text/template" id="am-template-component-switch">
-  <span class="inner-block"></span>
 </script>
 
 <script type="text/template" id="am-template-component-table">
@@ -174,8 +188,19 @@
   <%} %>
 </script>
 
-    <script type="text/template" id="am-template-page-login">
-  Hello <%= name %>
+    <script type="text/template" id="am-template-page-analysis">
+  <div class="tab-bar"></div>
+  <div class="am-panel panel-analysis-chart">
+    <div class="am-panel-title">
+      <div class="title-text">管辖小区数：<span class="analysis-chart-title-num">6</span>男女人口比例：<span class="analysis-chart-title-num">56:55</span></div>
+    </div>
+    <div class="am-panel-body analysis-chart">
+      <div class="control-chart"><div class="content-chart analysis-peo-chart"></div></div>
+      <div class="control-chart"><div class="content-chart analysis-homeless-peo-chart"></div></div>
+      <div class="control-chart"><div class="content-chart analysis-age-chart"></div></div>
+      <div class="control-chart"><div class="content-chart analysis-pass-time-chart"></div></div>
+    </div>
+  </div>
 </script>
 
 <script type="text/template" id="am-template-page-resident-list">
@@ -220,6 +245,10 @@
       </div>
     </div>
   </div>
+</script>
+
+<script type="text/template" id="am-template-page-login">
+  Hello <%= name %>
 </script>
 
 <script type="text/template" id="am-template-page-resident-register">
@@ -327,6 +356,89 @@
   </div>
 </script>
 
+<script type="text/template" id="am-template-page-statistic">
+  <div class="tab-bar"></div>
+  <div class="am-panel panel-resource-chart">
+    <div class="am-panel-title">
+      <div class="title-text">门禁设备总数：</div>
+      <a class="btn-device-year"><div class="am-btn device-chart-year">
+      年
+      </div></a>
+      <a class="btn-device-season"><div class="am-btn device-chart-season">
+      季
+      </div></a>
+      <a class="btn-device-month"><div class="am-btn device-chart-month chart-active">
+      月
+      </div></a>
+    </div>
+    <div class="choose-device-month"><div class="am-panel-body resource-chart device-month">
+    </div></div>
+    <div class="choose-device-season"><div class="am-panel-body resource-chart device-season">
+    </div></div>
+    <div class="choose-device-year"><div class="am-panel-body resource-chart device-year">
+    </div></div>
+  </div>
+  <div class="am-panel panel-resource-chart">
+    <div class="am-panel-title">
+      <div class="title-text">住户登记总数：</div>
+      <a class="btn-resident-year"><div class="am-btn resident-chart-year">
+      年
+      </div></a>
+      <a class="btn-resident-season"><div class="am-btn resident-chart-season">
+      季
+      </div></a>
+      <a class="btn-resident-month"><div class="am-btn resident-chart-month chart-active">
+      月
+      </div></a>
+    </div>
+    <div class="choose-resident-month"><div class="am-panel-body resource-chart resident-month">
+    </div></div>
+    <div class="choose-resident-season"><div class="am-panel-body resource-chart resident-season">
+    </div></div>
+    <div class="choose-resident-year"><div class="am-panel-body resource-chart resident-year">
+    </div></div>
+  </div>
+  <div class="am-panel panel-resource-chart">
+    <div class="am-panel-title">
+      <div class="title-text">人脸通行总数：</div>
+      <a class="btn-face-year"><div class="am-btn face-chart-year">
+      年
+      </div></a>
+      <a class="btn-face-season"><div class="am-btn face-chart-season">
+      季
+      </div></a>
+      <a class="btn-face-month"><div class="am-btn face-chart-month chart-active">
+      月
+      </div></a>
+    </div>
+    <div class="choose-face-month"><div class="am-panel-body resource-chart face-month">
+    </div></div>
+    <div class="choose-face-season"><div class="am-panel-body resource-chart face-season">
+    </div></div>
+    <div class="choose-face-year"><div class="am-panel-body resource-chart face-year">
+    </div></div>
+  </div>
+  <div class="am-panel panel-resource-chart">
+    <div class="am-panel-title">
+        <div class="title-text">报警总数：</div>
+      <a class="btn-warning-year"><div class="am-btn warning-chart-year">
+      年
+      </div></a>
+      <a class="btn-warning-season"><div class="am-btn warning-chart-season">
+      季
+      </div></a>
+      <a class="btn-warning-month"><div class="am-btn warning-chart-month chart-active">
+      月
+      </div></a>
+    </div>
+    <div class="choose-warning-month"><div class="am-panel-body resource-chart warning-month">
+    </div></div>
+    <div class="choose-warning-season"><div class="am-panel-body resource-chart warning-season">
+    </div></div>
+    <div class="choose-warning-year"><div class="am-panel-body resource-chart warning-year">
+    </div></div>
+</script>
+
 
     <div class="am-navbar navbar navbar-inverse navbar-fixed-top">
       <!-- Insert NavBar here -->
@@ -344,6 +456,7 @@
     <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript" src="js/locales/bootstrap-datepicker.zh-CN.min.js"></script>
-    <script type="text/javascript" src="js/bundle-44cd375dbe.js"></script>
+    <script type="text/javascript" src="js/echarts-all.js"></script>
+    <script type="text/javascript" src="js/bundle-69499c8d0d.js"></script>
   </body>
 </html>

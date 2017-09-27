@@ -299,7 +299,7 @@ a,a:hover {
 
 .am-control-group {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 25px;
 }
 
 .am-control-group .am-control {
@@ -434,7 +434,7 @@ input.am-input.error {
 }
 
 input.am-input.input-address {
-  width: 214px;
+  width: 180px;
 }
 
 .btn-date-select {

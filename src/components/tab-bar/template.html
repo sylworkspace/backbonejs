@@ -1,0 +1,13 @@
+<script type="text/template" id="am-template-component-tab-bar">
+  <div class="container-fluid am-tabs">
+    <% items.forEach(function(item) { %>
+      <a
+        class="am-tabs-box
+        <% if ( item.active ) { %>
+          active
+        <% } %>
+        "
+        href="<%= item.href %>"><%= item.text %></a>
+    <% }); %>
+  </div>
+</script>
