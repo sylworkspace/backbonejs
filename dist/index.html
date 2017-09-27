@@ -8,7 +8,7 @@
     <!--[if lt IE 9]>
       <script type="text/javascript" src="js/html5shiv.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="css/bundle-eb42675d5f.min.css">
+    <link rel="stylesheet" href="css/bundle-676960e008.min.css">
   </head>
   <body>
 
@@ -32,6 +32,33 @@
 <script type="text/template" id="am-template-component-datepicker">
   <input type="text" class="form-control am-input">
   <span class="am-icon-calendar"></span>
+</script>
+
+<script type="text/template" id="am-template-component-nav-bar">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="#">
+        <img class="brand-logo" src="img/header/logo.png">
+      </a>
+      <div class="platform-info">
+        <img class="platform-logo" src="img/header/platform-logo.png">
+        人员管理平台
+      </div>
+      <div class="op-panel pull-right">
+        <a class="icon-user" href="#">
+          <img src="img/header/user.png"></img>
+        </a>
+        <a class="btn-username" href="#">
+          admin
+        </a>
+      </div>
+    </div>
+  </div>
 </script>
 
 <script type="text/template" id="am-template-component-page-bar">
@@ -70,31 +97,23 @@
   <span class="am-icon-select-down"></span>
 </script>
 
-<script type="text/template" id="am-template-component-nav-bar">
-  <div class="navbar-inner">
-    <div class="container-fluid">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="brand" href="#">
-        <img class="brand-logo" src="img/header/logo.png">
-      </a>
-      <div class="platform-info">
-        <img class="platform-logo" src="img/header/platform-logo.png">
-        人员管理平台
-      </div>
-      <div class="op-panel pull-right">
-        <a class="icon-user" href="#">
-          <img src="img/header/user.png"></img>
-        </a>
-        <a class="btn-username" href="#">
-          admin
-        </a>
-      </div>
-    </div>
+<script type="text/template" id="am-template-component-side-bar">
+  <div class="sidebar-toggle">
+    <img class="btn-toggle btn-expand" src="img/sidebar/panel-expand.png">
+    <img class="btn-toggle btn-shrink" src="img/sidebar/panel-shrink.png">
   </div>
+  <a class="nav-item nav-item-user active" href="#resident/">
+    <div class="nav-item-icon"></div>
+    <span>住户管理</span>
+  </a>
+  <a class="nav-item nav-item-statistics" href="#statistic/resource">
+    <div class="nav-item-icon"></div>
+    <span>统计分析</span>
+  </a>
+  <a class="nav-item nav-item-setting" href="#configuration/">
+    <div class="nav-item-icon"></div>
+    <span>配置中心</span>
+  </a>
 </script>
 
 <script type="text/template" id="am-template-component-switch">
@@ -113,25 +132,6 @@
         href="<%= item.href %>"><%= item.text %></a>
     <% }); %>
   </div>
-</script>
-
-<script type="text/template" id="am-template-component-side-bar">
-  <div class="sidebar-toggle">
-    <img class="btn-toggle btn-expand" src="img/sidebar/panel-expand.png">
-    <img class="btn-toggle btn-shrink" src="img/sidebar/panel-shrink.png">
-  </div>
-  <a class="nav-item nav-item-user" href="#">
-    <div class="nav-item-icon"></div>
-    <span>住户管理</span>
-  </a>
-  <a class="nav-item nav-item-statistics" href="#">
-    <div class="nav-item-icon"></div>
-    <span>统计分析</span>
-  </a>
-  <a class="nav-item nav-item-setting" href="#">
-    <div class="nav-item-icon"></div>
-    <span>配置中心</span>
-  </a>
 </script>
 
 <script type="text/template" id="am-template-component-table">
@@ -203,6 +203,10 @@
   </div>
 </script>
 
+<script type="text/template" id="am-template-page-login">
+  Hello <%= name %>
+</script>
+
 <script type="text/template" id="am-template-page-resident-list">
   <div class="am-panel panel-resident-search">
     <div class="am-control-group">
@@ -245,10 +249,6 @@
       </div>
     </div>
   </div>
-</script>
-
-<script type="text/template" id="am-template-page-login">
-  Hello <%= name %>
 </script>
 
 <script type="text/template" id="am-template-page-resident-register">
@@ -457,6 +457,6 @@
     <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript" src="js/locales/bootstrap-datepicker.zh-CN.min.js"></script>
     <script type="text/javascript" src="js/echarts-all.js"></script>
-    <script type="text/javascript" src="js/bundle-69499c8d0d.js"></script>
+    <script type="text/javascript" src="js/bundle-b95279c86b.js"></script>
   </body>
 </html>

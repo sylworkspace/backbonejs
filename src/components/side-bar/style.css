@@ -1,0 +1,15 @@
+.am-sidebar .nav-item.active{
+    background-color: #08c;
+}
+.am-sidebar .nav-item.active span{
+    color: #fff;
+}
+.am-sidebar .nav-item-user.active .nav-item-icon {
+    background-image: url(../img/sidebar/user-active.png);
+}
+.am-sidebar .nav-item-statistics.active .nav-item-icon {
+    background-image: url(../img/sidebar/statistics-active.png);
+}
+.am-sidebar .nav-item-setting.active .nav-item-icon {
+    background-image: url(../img/sidebar/setting-active.png);
+}

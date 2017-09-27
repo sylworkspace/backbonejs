@@ -16003,7 +16003,8 @@ var SideBarView = Backbone.View.extend({
   className: 'am-sidebar',
   events: {
     'click .btn-expand': 'expand',
-    'click .btn-shrink': 'shrink'
+    'click .btn-shrink': 'shrink',
+    'click .nav-item': 'selectItem'
   },
   template: _.template($sideBarTemplate.html()),
   render: function render() {
@@ -16022,6 +16023,15 @@ var SideBarView = Backbone.View.extend({
     $('.am-page').addClass('simple');
 
     return false;
+  },
+  selectItem: function selectItem(e) {
+    var $navItem = $(e.target);
+    if (!$navItem.hasClass('nav-item')) {
+      $navItem = $navItem.parent('.nav-item');
+    }
+
+    $('.nav-item').removeClass('active');
+    $navItem.addClass('active');
   }
 });
 
@@ -17489,8 +17499,6 @@ var StatisticPage = Backbone.View.extend({
     });
 
     return this;
-
-    $('.btn-face-month').click();
   },
   onShow: function onShow() {
     this.onPageResize();

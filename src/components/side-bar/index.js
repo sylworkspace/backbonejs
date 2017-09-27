@@ -8,7 +8,8 @@ const SideBarView = Backbone.View.extend({
   className: 'am-sidebar',
   events: {
     'click .btn-expand': 'expand',
-    'click .btn-shrink': 'shrink'
+    'click .btn-shrink': 'shrink',
+    'click .nav-item': 'selectItem'
   },
   template: _.template($sideBarTemplate.html()),
   render() {
@@ -27,6 +28,15 @@ const SideBarView = Backbone.View.extend({
     $('.am-page').addClass('simple');
 
     return false;
+  },
+  selectItem(e) {
+    let $navItem = $(e.target);
+    if ( !($navItem.hasClass('nav-item')) ) {
+      $navItem = $navItem.parent('.nav-item');
+    }
+
+    $('.nav-item').removeClass('active');
+    $navItem.addClass('active');
   }
 });
 
